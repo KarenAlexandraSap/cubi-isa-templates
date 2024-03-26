@@ -15,6 +15,8 @@ templates are:
 - ``isatab-germline``
 - ``isatab-mass_cytometry``
 - ``isatab-microarray``
+- ``isatab-microarray_copy``
+- ``isatab-ms_meta_biocrates_copy``
 - ``isatab-ms_meta_biocrates``
 - ``isatab-single_cell_rnaseq``
 - ``isatab-somatic``
@@ -113,6 +115,18 @@ _TEMPLATES = (
         path=os.path.join(_BASE_DIR, "isatab-microarray"),
         description="microarray ISA-tab template",
         configuration=load_variables("isatab-microarray"),
+    ),
+     IsaTabTemplate(
+        name="microarray_copy",
+        path=os.path.join(_BASE_DIR, "isatab-microarray-copy"),
+        description="microarray ISA-tab template-copy",
+        configuration=load_variables("isatab-microarray-copy"),
+    ),
+    IsaTabTemplate(
+        name="ms_meta_biocrates_copy",
+        path=os.path.join(_BASE_DIR, "isatab-ms_meta_biocrates_copy"),
+        description="TEST MS Metabolomics Biocrates kit ISA-tab template",
+        configuration=load_variables("isatab-ms_meta_biocrates_copy"),
     ),
     IsaTabTemplate(
         name="ms_meta_biocrates",
